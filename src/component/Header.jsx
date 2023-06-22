@@ -90,7 +90,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to='/countries'
+                        to='/'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
                         Countries
