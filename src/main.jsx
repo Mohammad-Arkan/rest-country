@@ -9,6 +9,7 @@ import {
 import Home from './component/Home.jsx';
 import About from './component/About.jsx';
 import Countries from './component/Countries.jsx';
+import CountryDetails from './component/CountryDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,14 @@ const router = createBrowserRouter([
       },
       {
         path:"/countries",
-        element:<Countries/>
+        element:<Countries/>,
+        loader:()=> fetch('https://restcountries.com/v3.1/all')        
+      },
+      {
+        path: 'country/:id',
+        element: <CountryDetails/>,
+        loader: ({ params }) =>
+          fetch(`https://restcountries.com/v3.1/alpha/${params.id}`),
       },
       {
         path:"/about",
