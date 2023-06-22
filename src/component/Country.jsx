@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Country = ({country}) => {
     return (
-        // <Link to={`../book/${book.isbn13}`}>
+        
         <Link to={`../country/${country.cca2}`}>
         <div className='overflow-hidden relative transition duration-200 transform hover:-translate-y-2 rounded shadow-lg hover:shadow-2xl'>
           <img
